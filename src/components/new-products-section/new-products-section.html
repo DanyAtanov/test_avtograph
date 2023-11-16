@@ -1,0 +1,55 @@
+<section class="new-products-section">
+	{{#>title-section titleSectionClass="new-products-section__title"
+	titleLink="true"}} Новинки магазина{{/title-section}}
+
+	<div class="new-products-section__slider swiper">
+		<ul class="new-products-section__slider-wrapper swiper-wrapper">
+			<li class="new-products-section__slider-slide swiper-slide">
+				{{>product-card productFree="true" productImage="01.jpg"}}
+			</li>
+
+			<li class="new-products-section__slider-slide swiper-slide">
+				{{>product-card productNew="true" productImage="01.jpg"}}
+			</li>
+
+			<li class="new-products-section__slider-slide swiper-slide">
+				{{>product-card productFree="true" productImage="01.jpg"}}
+			</li>
+
+			<li class="new-products-section__slider-slide swiper-slide">
+				{{>product-card productNew="true" productPromo="true"
+				productImage="01.jpg"}}
+			</li>
+
+			<li class="new-products-section__slider-slide swiper-slide">
+				{{>product-card productNew="true" productImage="02.jpg"}}
+			</li>
+
+			<li class="new-products-section__slider-slide swiper-slide">
+				{{>product-card productPromo="true" productImage="02.jpg"}}
+			</li>
+
+			<li class="new-products-section__slider-slide swiper-slide">
+				{{>product-card productNew="true" productImage="02.jpg"}}
+			</li>
+
+			<li class="new-products-section__slider-slide swiper-slide">
+				{{>product-card productPromo="true" productImage="02.jpg"}}
+			</li>
+		</ul>
+		<div
+			class="new-products-section__slider-nav swiper-button-prev nav-slider"
+		>
+			<svg width="24" height="21">
+				<use xlink:href="#arrow-right"></use>
+			</svg>
+		</div>
+		<div
+			class="new-products-section__slider-nav swiper-button-next nav-slider"
+		>
+			<svg width="24" height="21">
+				<use xlink:href="#arrow-right"></use>
+			</svg>
+		</div>
+	</div>
+</section>

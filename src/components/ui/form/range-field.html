@@ -1,0 +1,83 @@
+<div class="range-field{{#if rangeFieldClass}} {{ rangeFieldClass }}{{/if}}">
+	<div class="range-field__title">
+		<span>{{{ rangeFieldTitle }}}</span>
+		{{#if withMeasureCurrency}}
+			<div class="range-field__measure">
+				<div class="range-field__measure-title">
+					<span>EUR</span>
+					<svg><use xlink:href="#chevron_down"></use></svg>
+				</div>
+				<div class="range-field__measure-list">
+					<div class="range-field__measure-item _is-selected">
+						<span class="_long">EUR</span>
+						<span class="_short">€</span>
+					</div>
+					<div class="range-field__measure-item">
+						<span class="_long">USD</span>
+						<span class="_short">$</span>
+					</div>
+					<div class="range-field__measure-item">
+						<span class="_long">RUB</span>
+						<span class="_short">₽</span>
+					</div>
+				</div>
+			</div>
+		{{/if}}
+		{{#if withMeasureSize}}
+			<div class="range-field__measure">
+				<div class="range-field__measure-title">
+					<span>метры</span>
+					<svg><use xlink:href="#chevron_down"></use></svg>
+				</div>
+				<div class="range-field__measure-list">
+					<div class="range-field__measure-item _is-selected">
+						<span class="_long">метры</span>
+						<span class="_short">М</span>
+					</div>
+					<div class="range-field__measure-item">
+						<span class="_long">футы</span>
+						<span class="_short">Ф</span>
+					</div>
+				</div>
+			</div>
+		{{/if}}
+	</div>
+	<div class="range-field__body">
+		<div class="range-field__field">
+			<label for="{{rangeFieldName}}_start" class="range-field__label">
+				от
+			</label>
+			<input
+				class="range-field__input"
+				data-range-start="{{{ start }}}"
+				data-range-min="{{{ start }}}"
+				data-range-step="1"
+				type="text"
+				name="{{rangeFieldName}}_start"
+				value="{{{ start }}}"
+			/>
+		</div>
+		<div class="range-field__field">
+			<label for="{{rangeFieldName}}_end" class="range-field__label">
+				до
+			</label>
+			<input
+				class="range-field__input"
+				data-range-end="{{{ end }}}"
+				data-range-max="{{{ end }}}"
+				type="text"
+				name="{{rangeFieldName}}_end"
+				value="{{{ end }}}"
+			/>
+		</div>
+	</div>
+	<div class="range-field__slider">
+		<div class="range-field__noUi"></div>
+	</div>
+
+	{{#if withBtn}}
+		<div class="range-field__btn">
+			<button class="button" data-action="setRangeValue" type="button">Новые</button>
+		</div>
+	{{/if}}
+</div>

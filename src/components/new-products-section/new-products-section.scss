@@ -1,0 +1,56 @@
+.new-products-section {
+	$that: &;
+
+	&__slider {
+		overflow: visible;
+		opacity: 0;
+		transition: opacity 0.3s ease-out;
+
+		&._is-loaded {
+			opacity: 1;
+		}
+	}
+
+	&__slider-wrapper {
+		transition-timing-function: cubic-bezier(0.25, 0.3, 0, 1.1) !important;
+	}
+
+	&__slider-slide {
+		transition: transform 1s cubic-bezier(0.25, 0.2, 0, 1.12),
+			opacity 0.5s ease-out;
+
+		width: calc(100% / 7);
+
+		&:not(.swiper-slide-visible) {
+			pointer-events: none;
+			opacity: 0.5;
+			transform: scale(0.75);
+		}
+	}
+
+	&__slider-nav {
+		&.swiper-button-prev {
+			left: -32px;
+
+			@include laptop {
+				left: -24px;
+			}
+
+			@include phone {
+				left: -18px;
+			}
+		}
+
+		&.swiper-button-next {
+			right: -32px;
+
+			@include laptop {
+				right: -24px;
+			}
+
+			@include phone {
+				right: -18px;
+			}
+		}
+	}
+}

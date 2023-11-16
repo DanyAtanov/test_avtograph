@@ -1,0 +1,21 @@
+.link {
+	font-size: 13px;
+	font-weight: 400;
+	position: relative;
+	color: $color_primary;
+	margin-left: 34px;
+
+	&::before {
+		content: url('data:image/svg+xml, <svg width="5"	height="17"	viewBox="0 0 5 17"	fill="none"	xmlns="http://www.w3.org/2000/svg"><path d="M3.93103 1L0.999996 4.06089L3.93103 7.12179L0.999996 10.1827L3.93103 13.2436L0.999996 16.4222" stroke="hsl(24, 100%, 59%)" stroke-miterlimit="10"/></svg>');
+		width: 5px;
+		height: 17px;
+		position: absolute;
+		left: -18px;
+		top: calc(50% - 1px);
+		transform: translate3d(0, -50%, 0);
+	}
+
+	&:hover {
+		color: #ea5d00;
+	}
+}

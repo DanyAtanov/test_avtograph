@@ -1,0 +1,26 @@
+.close-modal {
+	$that: &;
+
+	appearance: none;
+	user-select: none;
+	cursor: pointer;
+
+	&__svg {
+		display: block;
+		width: 26px;
+		height: 26px;
+		padding: 0 22px 22px;
+		color: $white;
+		box-sizing: content-box;
+		transition: color 0.25s ease-in-out;
+
+		@media (max-width: 360px) {
+			color: $black;
+			padding: 16px;
+		}
+
+		&:hover {
+			color: $color_primary;
+		}
+	}
+}

@@ -1,0 +1,22 @@
+.title-section {
+	$that: &;
+
+	display: flex;
+	align-items: flex-start;
+	padding-bottom: 40px;
+
+	@include phone {
+		padding-bottom: 32px;
+	}
+
+	&__title {
+		font-family: $font_title;
+		font-size: 20px;
+		font-weight: 900;
+	}
+
+	&__link {
+		margin-top: 4px;
+		flex: none;
+	}
+}

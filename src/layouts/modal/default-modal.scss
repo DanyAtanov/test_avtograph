@@ -1,0 +1,70 @@
+.default-modal {
+	$that: &;
+
+	position: relative;
+	max-width: 436px;
+	border-radius: 0px;
+	margin: auto;
+	color: $color_body;
+	background: $white;
+	padding: 48px;
+	overflow: auto;
+
+	& + & {
+		z-index: 10;
+	}
+
+	@include phone {
+		position: absolute;
+		max-width: 100%;
+		top: 0;
+		left: 0;
+		right: 0;
+		min-height: 100vh;
+	}
+
+	&__close {
+		position: absolute;
+		z-index: 1;
+		top: 20px;
+		right: 16px;
+		cursor: pointer;
+
+		@include phone {
+			top: 8px;
+			right: 12px;
+		}
+
+		@include phone-s {
+			top: 8px;
+			right: 10px;
+		}
+
+		&:hover {
+			svg {
+				transform: scale(1.4);
+				color: $color_primary;
+			}
+		}
+
+		svg {
+			color: $color_body;
+			cursor: pointer;
+			transform: scale(1);
+			transition: transform 0.1s ease-out, color 0.1s ease-out;
+		}
+
+		button {
+			background: transparent;
+			border: none;
+			padding: 0;
+			margin: 0;
+			cursor: pointer;
+		}
+	}
+
+	&__inner {
+		position: relative;
+		overflow: hidden;
+	}
+}

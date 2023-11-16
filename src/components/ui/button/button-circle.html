@@ -1,0 +1,29 @@
+{{#if buttonHref}}
+<a
+	href="{{buttonHref}}"
+	class="button-circle {{#if buttonClass}} {{buttonClass}}{{/if}}"
+>
+	<div class="button-circle__name">{{> @partial-block}}</div>
+	{{#if buttonIcon}}
+	<div class="button-circle__icon">
+		<svg>
+			<use xlink:href="#{{buttonIcon}}"></use>
+		</svg>
+	</div>
+	{{/if}}
+</a>
+{{else}}
+<button
+	type="#"
+	class="button-circle {{#if buttonClass}} {{buttonClass}}{{/if}}"
+>
+	<div class="button-circle__name">{{> @partial-block}}</div>
+	{{#if buttonIcon}}
+	<div class="button-circle__icon">
+		<svg>
+			<use xlink:href="#{{buttonIcon}}"></use>
+		</svg>
+	</div>
+	{{/if}}
+</button>
+{{/if}}

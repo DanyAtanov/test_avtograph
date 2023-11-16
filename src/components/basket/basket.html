@@ -1,0 +1,37 @@
+<nav class="basket">
+	<div class="basket__inner">
+		<div class="basket__head">
+			<svg width="23" height="22">
+				<use xlink:href="#basket"></use>
+			</svg>
+			<span> Корзина</span>
+			<div class="basket__close">
+				<svg width="14" height="14">
+					<use xlink:href="#close"></use>
+				</svg>
+			</div>
+		</div>
+		<ul class="basket__list">
+			<li class="basket__item">
+				{{>product-card productImage="01.jpg"}}
+			</li>
+			<li class="basket__item">
+				{{>product-card productImage="02.jpg"}}
+			</li>
+			<li class="basket__item">
+				{{>product-card productImage="01.jpg"}}
+			</li>
+			<li class="basket__item">
+				{{>product-card productImage="01.jpg"}}
+			</li>
+		</ul>
+		<div class="basket__bottom">
+			<div class="basket__total">
+				<span class="basket__total-quantity"> 6 товаров</span>
+				<span class="basket__total-price">3568 р.</span>
+			</div>
+			{{#>button buttonClass='basket__action'
+			buttonIcon='purchase'}}Оформить заказ {{/button}}
+		</div>
+	</div>
+</nav>

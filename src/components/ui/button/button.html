@@ -1,0 +1,10 @@
+<button class="button {{#if buttonClass}}{{buttonClass}}{{/if}}">
+	{{#if buttonIcon}}
+	<div class="button__icon">
+		<svg>
+			<use xlink:href="#{{buttonIcon}}"></use>
+		</svg>
+	</div>
+	{{/if}}
+	<div class="button__text">{{@partial-block}}</div>
+</button>

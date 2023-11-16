@@ -1,0 +1,51 @@
+<div class="product-card" data>
+	<a class="product-card__go" href="#">
+		<div class="product-card__picture">
+			<img
+				loading="lazy"
+				src="../../assets/images/content/products/{{productImage}}"
+				alt=""
+			/>
+		</div>
+
+		<div class="product-card__name">
+			Диск шлифовальный перфорироперфорированный ABRAforce с липучкой
+			Рxbvgcfперфорированный ABRAforce с липучкой Рxbvgcfперфорированный
+			ABRAforce с липучкой Рxbvgcfванный ABRAforce с липучкой Рxbvgcfhb 5
+			шт.)
+		</div>
+	</a>
+
+	<div class="product-card__bottom">
+		<span class="product-card__quantity">{{>counter}}</span>
+		<span class="product-card__price"> 400 р.</span>
+	</div>
+
+	<div class="product-card__tags-wrapper">
+		{{#if productFree}}
+		<span class="product-card__tag product-card__tag--free">
+			<svg width="24" height="12">
+				<use xlink:href="#delivery"></use>
+			</svg>
+			Бесплатно
+		</span>
+		{{/if}} {{#if productNew}}
+		<span class="product-card__tag product-card__tag--new">
+			Новинка
+		</span>
+		{{/if}} {{#if productPromo}}
+		<span class="product-card__tag product-card__tag--promo">
+			Акция
+		</span>
+		{{/if}}
+	</div>
+
+	<div class="product-card__delete">
+		<svg width="12" height="13">
+			<use xlink:href="#close"></use>
+		</svg>
+	</div>
+
+	{{#>button buttonClass='product-card__action' buttonIcon='basket'}}В
+	корзину{{/button}}
+</div>

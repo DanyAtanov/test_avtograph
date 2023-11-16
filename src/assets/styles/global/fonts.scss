@@ -1,0 +1,45 @@
+/*
+* Rubik
+*/
+/* @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600&display=swap'); */
+
+
+@font-face {
+	font-family: 'Futura Futuris';
+	font-weight: 400;
+	font-style: normal;
+	font-display: auto;
+	src: local('Futura Futuris'),
+		url('../fonts/FuturaFuturisC.woff2') format('woff2'),
+		url('../fonts/FuturaFuturisC.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Futura Futuris';
+	font-weight: 300;
+	font-style: normal;
+	font-display: auto;
+	src: local('Futura Futuris'),
+		url('../fonts/FuturaFuturisLightC.woff2') format('woff2'),
+		url('../fonts/FuturaFuturisLightC.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Futura Futuris';
+	font-weight: 700;
+	font-style: normal;
+	font-display: auto;
+	src: local('Futura Futuris'),
+		url('../fonts/FuturaFuturisC-Bold.woff2') format('woff2'),
+		url('../fonts/FuturaFuturisC-Bold.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Futura Futuris';
+	font-weight: 900;
+	font-style: normal;
+	font-display: auto;
+	src: local('Futura Futuris'),
+		url('../fonts/FuturaFuturisBlackC.woff2') format('woff2'),
+		url('../fonts/FuturaFuturisBlackC.woff') format('woff');
+}

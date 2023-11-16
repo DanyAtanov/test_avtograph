@@ -1,0 +1,40 @@
+.layout {
+	$that: &;
+
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	overflow: hidden;
+
+	&__header {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		z-index: 100;
+		flex: none;
+		transition: transform 0.3s ease-in;
+
+		@media (min-width: 769px) {
+			.page_scrolled & {
+				transform: translate3d(0, calc(-66px - 32px), 0);
+			}
+
+			.page_scroll-up:not(.page_scrolled) & {
+				transition: transform 0.25s ease-in;
+			}
+		}
+	}
+
+	&__content {
+		flex: 1 0 auto;
+		padding-top: 150px;
+
+		@include phone {
+			padding-top: 73px;
+		}
+	}
+
+	&__footer {
+	}
+}

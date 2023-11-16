@@ -1,0 +1,94 @@
+.input-form {
+	$that: &;
+
+	display: flex;
+	width: 100%;
+	height: 72px;
+	position: relative;
+
+	&._error {
+		&::after {
+			content: 'Не корректно введен email';
+			font-size: 12px;
+			line-height: 14px;
+			color: #dc5252;
+			position: absolute;
+			left: 0;
+			bottom: -20px;
+		}
+	}
+
+	&__label {
+		font-size: 18px;
+		position: absolute;
+		z-index: 3;
+		padding: 26px 23px;
+		transform: scale3d(1, 1, 1);
+		transition: transform 0.35s cubic-bezier(0.5, 1, 0.89, 1),
+			color 0.35s 0.1s cubic-bezier(0.5, 1, 0.89, 1);
+		// will-change: transform;
+		transform-origin: left center;
+		pointer-events: none;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		width: 100%;
+
+		#{$that}._is-focus &,
+		#{$that}._is-filled & {
+			transform: scale3d(0.7, 0.7, 1) translate(-22px, -67px);
+			color: $color_primary;
+		}
+
+		#{$that}._error & {
+			transform: scale3d(0.7, 0.7, 1) translate(-22px, -67px);
+			color: $red !important;
+		}
+
+		@include phone {
+			text-align: center;
+
+			#{$that}._is-focus &,
+			#{$that}._is-filled & {
+				transform: scale3d(0.7, 0.7, 1) translate(-184px, -67px);
+				color: $color_primary;
+			}
+
+			#{$that}._error & {
+				transform: scale3d(0.7, 0.7, 1) translate(-184px, -67px);
+				color: $red !important;
+			}
+		}
+	}
+
+	&__field {
+		position: relative;
+		flex: 1 1 100%;
+		background-color: #2d2e33;
+		padding: 26px 23px;
+		color: $white;
+		border: 1px solid #2d2e33;
+		border-radius: 4px;
+		transition: border-color 0.35s cubic-bezier(0.5, 1, 0.89, 1),
+			color 0.35s 0.1s cubic-bezier(0.5, 1, 0.89, 1);
+
+		.dropdown-menu & {
+			background-color: $white;
+			border: 1px solid rgba(0, 0, 0, 0.09);
+			color: #696d79;
+		}
+
+		._is-focus & {
+			border-color: $color_primary;
+		}
+
+		#{$that}._is-focus &,
+		#{$that}._is-filled & {
+			border-color: $color_primary;
+		}
+
+		#{$that}._error & {
+			color: $red !important;
+			border-color: $red !important;
+		}
+	}
+}

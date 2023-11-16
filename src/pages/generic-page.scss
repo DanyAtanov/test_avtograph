@@ -1,0 +1,13 @@
+.generic-page {
+	$that: &;
+
+	@extend %container;
+
+	padding-top: 60px;
+	padding-bottom: 18px;
+
+	@include phone {
+		padding-top: 32px;
+		padding-bottom: 0;
+	}
+}

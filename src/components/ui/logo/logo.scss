@@ -1,0 +1,15 @@
+.logo {
+	$that: &;
+
+	display: inline-block;
+	vertical-align: middle;
+	color: $black;
+
+	&._white {
+		color: $white;
+	}
+
+	&:hover {
+		color: $color_primary;
+	}
+}

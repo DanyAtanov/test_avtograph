@@ -1,0 +1,58 @@
+.menu {
+	$that: &;
+
+	@include phone {
+		padding: 0 0 32px;
+	}
+
+	&__list {
+		display: flex;
+		justify-content: center;
+
+		@include phone {
+			flex-direction: column;
+		}
+	}
+
+	&__item {
+		padding: 0 8px;
+		padding: 0 clamp(0px, calc(8 / 1280 * 100vw), 8px);
+	}
+
+	&__item-link {
+		display: block;
+		text-align: center;
+		overflow: hidden;
+		position: relative;
+		padding: 20px 22px 17px;
+		padding: 20px clamp(12px, calc(22 / 1280 * 100vw), 22px) 17px;
+
+		span {
+			font-weight: 900;
+			padding-right: 4px;
+		}
+
+		&::after {
+			content: url('data:image/svg+xml, <svg width="107"	height="8"	viewBox="0 0 107 8"	fill="none"	xmlns="http://www.w3.org/2000/svg">	<path d="M17.073 0.168945L8.95397 2.04565L0 8.16895H107L102.075 3.29679L93.1213 5.1735L85.9582 3.92236L83.272 2.04565L78.6137 0.794515L74.459 5.1735L70.3408 6.56895L66.2796 3.92236L62.1898 2.67122H58.1001L54.0104 1.42008L49.8557 2.04565L45.766 4.54793L41.6763 5.1735L37.5865 1.42008L33.4968 3.29679L29.4071 1.42008L25.2524 3.92236L21.1627 1.42008L17.073 0.168945Z" fill="hsl(24, 100%, 59%)"	/></svg>');
+			width: 107px;
+			height: 8px;
+			position: absolute;
+			left: 50%;
+			bottom: 0;
+			transform: translate3d(-50%, 100%, 0) scale(1.8);
+			transition: transform 0.5s ease-in-out;
+		}
+
+		@media (min-width: 769px) {
+			&:hover {
+				&::after {
+					transform: translate3d(-50%, -50%, 0) scale(1);
+				}
+			}
+		}
+
+		@include phone {
+			padding: 0 0 32px;
+		}
+	}
+}

@@ -1,0 +1,178 @@
+.footer {
+	$that: &;
+
+	overflow: hidden;
+	position: relative;
+	background-color: #222;
+	padding: 60px 0 120px;
+	color: $white;
+	font-style: normal;
+	line-height: normal;
+	background: url('data:image/svg+xml, <svg width="1440" height="297" viewBox="0 0 1440 297" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M0 36L75.6 0L151.2 72L226.8 216L303.6 72L379.2 180L454.8 72L530.4 288L606 252L681.6 108L758.4 72L834 144H909.6L985.2 216L1060.8 394L1136.4 288L1213.2 36H1288.8L1364.4 144L1440 36V394H1364.4H1288.8H1213.2H1136.4H1060.8H985.2H909.6H834H758.4H681.6H606H530.4H454.8H379.2H303.6H226.8H151.2H75.6H0V36Z" fill="hsl(0, 0%, 20%)"/></svg>')
+			repeat-x bottom center,
+		#222;
+
+	@include phone {
+		padding: 56px 0 68px;
+	}
+
+	&__container {
+		@extend %container;
+
+		display: flex;
+		justify-content: space-between;
+
+		@include tablet {
+			flex-wrap: wrap;
+		}
+	}
+
+	&__column {
+		flex: 0 0 20%;
+
+		&:nth-child(2) {
+			flex: 1 1 auto;
+
+			@include tablet {
+				flex: 1 1 100%;
+				order: 3;
+				margin-top: 52px;
+			}
+		}
+
+		&:last-child {
+			text-align: right;
+
+			@include phone {
+				margin-top: 62px;
+				text-align: left;
+			}
+		}
+
+		@include tablet {
+			flex: 0 0 40%;
+		}
+
+		@include phone {
+			flex: 1 1 100%;
+
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+		}
+	}
+
+	&__logo {
+		@include phone {
+			display: none;
+		}
+	}
+
+	&__address {
+		margin: 32px 0 30px;
+		font-size: 15px;
+		font-style: normal;
+		color: inherit;
+
+		@include phone {
+			max-width: 268px;
+			margin-top: 0;
+		}
+	}
+
+	&__address-list {
+	}
+
+	&__address-item {
+		padding-left: 36px;
+		position: relative;
+
+		&::before {
+			content: url('data:image/svg+xml, <svg	width="20"	height="20"	viewBox="0 0 20 20"	fill="none"	xmlns="http://www.w3.org/2000/svg">	<path		d="M10 13C10.81 13 11.5 12.7 12.11 12.11C12.7 11.5 13 10.81 13 10C13 9.19 12.7 8.5 12.11 7.89C11.5 7.3 10.81 7 10 7C9.19 7 8.5 7.3 7.89 7.89C7.3 8.5 7 9.19 7 10C7 10.81 7.3 11.5 7.89 12.11C8.5 12.7 9.19 13 10 13ZM10 0C12.75 0 15.1 1 17.05 2.95C19 4.9 20 7.25 20 10V11.45C20 12.45 19.65 13.3 19 14C18.3 14.67 17.5 15 16.5 15C15.3 15 14.31 14.5 13.56 13.5C12.56 14.5 11.38 15 10 15C8.63 15 7.45 14.5 6.46 13.54C5.5 12.55 5 11.38 5 10C5 8.63 5.5 7.45 6.46 6.46C7.45 5.5 8.63 5 10 5C11.38 5 12.55 5.5 13.54 6.46C14.5 7.45 15 8.63 15 10V11.45C15 11.86 15.16 12.22 15.46 12.53C15.76 12.84 16.11 13 16.5 13C16.92 13 17.27 12.84 17.57 12.53C17.87 12.22 18 11.86 18 11.45V10C18 7.81 17.23 5.93 15.65 4.35C14.07 2.77 12.19 2 10 2C7.81 2 5.93 2.77 4.35 4.35C2.77 5.93 2 7.81 2 10C2 12.19 2.77 14.07 4.35 15.65C5.93 17.23 7.81 18 10 18H15V20H10C7.25 20 4.9 19 2.95 17.05C1 15.1 0 12.75 0 10C0 7.25 1 4.9 2.95 2.95C4.9 1 7.25 0 10 0Z"		fill="hsl(24, 100%, 59%)"	/></svg>');
+			width: 20px;
+			height: 20px;
+			position: absolute;
+			left: 0;
+		}
+
+		&:not(:first-child) {
+			padding-top: 28px;
+		}
+
+		&:last-child {
+			&::before {
+				content: url('data:image/svg+xml, <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.05 12H0V10H2.05C2.5 5.83 5.83 2.5 10 2.05V0H12V2.05C16.17 2.5 19.5 5.83 19.95 10H22V12H19.95C19.5 16.17 16.17 19.5 12 19.95V22H10V19.95C5.83 19.5 2.5 16.17 2.05 12ZM11 4C9.14348 4 7.36301 4.7375 6.05025 6.05025C4.7375 7.36301 4 9.14348 4 11C4 12.8565 4.7375 14.637 6.05025 15.9497C7.36301 17.2625 9.14348 18 11 18C12.8565 18 14.637 17.2625 15.9497 15.9497C17.2625 14.637 18 12.8565 18 11C18 9.14348 17.2625 7.36301 15.9497 6.05025C14.637 4.7375 12.8565 4 11 4Z" fill="hsl(24, 100%, 59%)"/></svg>');
+			}
+		}
+	}
+
+	&__address-link {
+		color: $color_primary;
+	}
+
+	&__inner-text {
+		max-width: 638px;
+		margin: 0 auto;
+		padding: 0 32px;
+
+		@include tablet {
+			max-width: 100%;
+			padding: 0;
+		}
+	}
+
+	&__info {
+		color: #595959;
+		padding-bottom: 30px;
+	}
+
+	&__copyright {
+	}
+
+	&__phone {
+		display: block;
+		font-size: 20px;
+		font-weight: 900;
+		margin-bottom: 6px;
+	}
+
+	&__work-hours {
+		position: relative;
+		padding-right: 36px;
+		margin-bottom: 32px;
+		line-height: 16px;
+
+		&::before {
+			content: url('data:image/svg+xml, <svg	width="20"	height="21"	viewBox="0 0 20 21"	fill="none"	xmlns="http://www.w3.org/2000/svg">	<path		d="M10 18.8164C14.42 18.8164 18 15.2364 18 10.8164C18 6.39641 14.42 2.81641 10 2.81641C5.58 2.81641 2 6.39641 2 10.8164C2 15.2364 5.58 18.8164 10 18.8164ZM10 0.816406C15.5 0.816406 20 5.31641 20 10.8164C20 16.3164 15.5 20.8164 10 20.8164C4.47 20.8164 0 16.3164 0 10.8164C0 5.31641 4.5 0.816406 10 0.816406ZM10.5 11.8164H9V5.81641H10.5V10.0764L14.2 7.94641L14.95 9.24641L10.5 11.8164Z"		fill="hsl(24, 100%, 59%)"	/></svg>');
+			width: 20px;
+			height: 20px;
+			position: absolute;
+			right: 0;
+		}
+
+		@include phone {
+			padding-left: 36px;
+			padding-right: 0;
+
+			&::before {
+				right: auto;
+				left: 0;
+			}
+		}
+	}
+
+	&__request-call {
+		display: block;
+		color: $color_primary;
+	}
+
+	&__socials {
+		margin-top: 20px;
+		justify-content: flex-end;
+
+		@include phone {
+			justify-content: center;
+		}
+	}
+}

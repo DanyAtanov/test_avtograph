@@ -1,0 +1,103 @@
+.menu-catalog {
+	$that: &;
+
+	width: 340px;
+	position: fixed;
+	z-index: 9999;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	background-color: $white;
+	overflow: auto;
+	transition: 0.35s ease-out, 0.35s ease-out;
+	transform: translate3d(-100%, 0, 0);
+	visibility: hidden;
+
+	&._is-open {
+		visibility: visible;
+		transform: translate3d(0, 0, 0);
+		box-shadow: 4px 4px 100px rgba(43, 42, 41, 0.15);
+	}
+
+	@include phone {
+		transform: translate3d(-100%, 0, 0);
+		min-width: 100%;
+		top: 74px;
+
+		.menu_open & {
+			transform: translate3d(100%, 0, 0);
+
+			&._is-open {
+				visibility: visible;
+				transform: translate3d(0, 0, 0);
+				box-shadow: none;
+			}
+		}
+	}
+
+	&__inner {
+		height: 100%;
+		overflow: auto;
+	}
+
+	&__head {
+		cursor: pointer;
+		overflow: hidden;
+		padding: 19px 25px;
+		font-size: 20px;
+		font-weight: 900;
+		position: relative;
+
+		width: 100%;
+
+		&::after {
+			content: url('data:image/svg+xml, <svg width="8" height="16" viewBox="0 0 8 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 16L8 8L0 0V16Z" fill="black"/></svg>');
+			width: 8px;
+			height: 16px;
+			position: absolute;
+			right: 22px;
+			transform: rotate(180deg);
+		}
+
+		&::before {
+			content: '';
+			width: 140vw;
+			height: 1px;
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			transform: translate3d(-50%, 0, 0);
+			background-color: $black;
+		}
+	}
+
+	&__list {
+	}
+
+	&__item {
+		padding: 15px 25px;
+
+		& + & {
+			border-top: 1px solid #f4f4f4;
+		}
+	}
+
+	&__item-link {
+		display: flex;
+		align-items: center;
+
+		svg {
+			width: 38px;
+			height: 38px;
+			flex: none;
+			margin-right: 34px;
+			transition: transform 0.3s ease-out;
+		}
+
+		&:hover {
+			svg {
+				transform: rotate(90deg);
+			}
+		}
+	}
+}

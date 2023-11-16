@@ -1,0 +1,86 @@
+<header class="header">
+	<div class="header__content-wrapper">
+		<div class="header__container">
+			<div class="header__content">
+				<ul class="header__row">
+					<li class="header__row-item">
+						<button class="header__action-contacts">
+							<svg width="13" height="23">
+								<use xlink:href="#location"></use></svg
+							>Контакты
+						</button>
+					</li>
+					<li class="header__row-item">
+						{{>logo logoClass="header__logo" }}
+					</li>
+					<li class="header__row-item">
+						<div class="header__contacts">
+							<div class="header__contacts-row">
+								<a href="tel:88002228781" class="header__phone"
+									>8 (800) 222-87-81</a
+								>
+
+								<a href="tel:88123258780" class="header__phone"
+									>8 (812) 325-87-80</a
+								>
+							</div>
+
+							<div class="header__contacts-row">
+								<a href="#" data-modal="callback" class="header__request-call"
+									>Заказать звонок</a
+								>
+
+								{{#>link linkHref="https://wa.me/#"
+								linkClass="header__whatsapp"}}WhatsApp{{/link}}
+							</div>
+						</div>
+					</li>
+				</ul>
+
+				<ul class="header__row">
+					<li class="header__row-item">
+						<button class="header__action-catalog">Каталог</button>
+					</li>
+					<li class="header__row-item">
+						{{>menu menuClass="header__menu"}}
+					</li>
+					<li class="header__row-item">
+						<div class="header__actions">
+							<button class="header__search">
+								<svg width="22" height="22">
+									<use xlink:href="#search"></use>
+								</svg>
+							</button>
+							<button class="header__like">
+								<svg width="24" height="21">
+									<use xlink:href="#heart"></use>
+								</svg>
+							</button>
+							<button class="header__basket" data-basket="15">
+								<svg width="23" height="22">
+									<use xlink:href="#basket"></use>
+								</svg>
+							</button>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="header__mobile-header">
+		<div class="header__burger burger">
+			<svg width="29" height="25">
+				<use xlink:href="#burger"></use>
+			</svg>
+		</div>
+
+		{{>logo logoClass="header__logo header__logo--mobile " }}
+
+		<button class="header__basket header__basket--mobile" data-basket="15">
+			<svg width="23" height="22">
+				<use xlink:href="#basket"></use>
+			</svg>
+		</button>
+	</div>
+</header>

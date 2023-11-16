@@ -1,0 +1,23 @@
+.socials {
+	$that: &;
+
+	@include flex-center;
+
+	color: $color_primary;
+
+	&__list {
+		@include flex-center;
+	}
+
+	&__item {
+		&:not(:first-child) {
+			margin-left: 22px;
+		}
+	}
+
+	&__go {
+		&:hover {
+			color: #ea5d00;
+		}
+	}
+}

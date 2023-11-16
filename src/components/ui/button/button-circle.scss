@@ -1,0 +1,91 @@
+.button-circle {
+	$that: &;
+
+	position: relative;
+	overflow: hidden;
+	width: 204px;
+	height: 204px;
+	border-radius: 50%;
+	border: 1px solid #ffffff4d;
+	text-decoration: none;
+	background: transparent;
+	color: $white;
+	cursor: pointer;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	transition: border-color 0.55s 0.35s ease, transform 0.65s ease-in-out;
+	box-sizing: border-box;
+	padding: 0;
+
+	@include flex-center;
+	flex-direction: column;
+
+	&::before {
+		content: '';
+		width: 100%;
+		height: 100%;
+		border-radius: 50%;
+		opacity: 0;
+		background: $color_primary;
+		position: absolute;
+		z-index: 1;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%) scale(0);
+		transition: opacity 0.75s 0.2s, transform 0.65s 0.2s ease-in-out;
+
+		.dropdown-menu._is-open & {
+			transform: translate(-50%, -50%) scale(1);
+			opacity: 1;
+		}
+	}
+
+	&:hover {
+		border-color: transparent;
+		transform: scale(1.1);
+
+		&::before {
+			transform: translate(-50%, -50%) scale(1);
+			opacity: 1;
+		}
+	}
+
+	&__name {
+		font-family: $font_title;
+		font-weight: 600;
+		font-size: 12px;
+		line-height: 28px;
+		text-align: center;
+		text-transform: uppercase;
+		max-width: 140px;
+		padding: 6px 0;
+		position: relative;
+		z-index: 2;
+
+		#{$that}:hover & {
+			color: $white;
+		}
+	}
+
+	&__icon {
+		color: #ffffff4d;
+		flex: none;
+		padding: 6px 0;
+		position: relative;
+		z-index: 2;
+		transition: color 0.45s 0.2s;
+
+		svg {
+			width: 24px;
+			height: 24px;
+		}
+
+		.subscribe-section & {
+			color: $white;
+		}
+
+		#{$that}:hover & {
+			color: $white;
+		}
+	}
+}

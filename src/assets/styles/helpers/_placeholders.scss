@@ -1,0 +1,24 @@
+// Container placeholder
+%container {
+	width: 100%;
+	max-width: 1440px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 80px;
+	padding-right: 80px;
+
+	@include laptop {
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+
+	@include phone {
+		padding-left: 22px;
+		padding-right: 22px;
+	}
+
+	@include phone-s {
+		padding-left: 16px;
+		padding-right: 16px;
+	}
+}

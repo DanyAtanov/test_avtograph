@@ -1,0 +1,9 @@
+<div class="title-section  {{#if titleSectionClass}}{{titleSectionClass}}{{/if}}">
+	<h2 class="title-section__title">
+		{{@partial-block}}
+	</h2>
+
+	{{#if titleLink}}
+		{{#>link linkHref="#"								linkClass="title-section__link"}}Смотреть все{{/link}}
+	{{/if}}
+</div>

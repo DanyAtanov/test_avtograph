@@ -1,0 +1,17 @@
+{{!--
+@property
+	selectClass
+ --}}
+<div class="select-form{{#if selectClass}} {{ selectClass }}{{/if}}">
+	{{#if selectTitle}}
+	<div class="select-form__title">{{{ selectTitle }}}</div>
+	{{/if}}
+	<select
+		{{{ selectAction }}}
+		data-placeholder="{{ selectPlaceholder }}"
+		name="{{ selectName }}"
+		{{#if multiple}}multiple{{/if}}
+	>
+		{{> @partial-block}}
+	</select>
+</div>

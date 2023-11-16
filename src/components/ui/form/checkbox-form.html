@@ -1,0 +1,14 @@
+<label class="checkbox-form {{ checkboxClass }}">
+	<input
+		class="checkbox-form__input"
+		type="checkbox"
+		name="{{ checkboxName }}"
+		value="{{ checkboxValue }}"
+	/>
+	<div class="checkbox-form__box">
+		<svg class="checkbox-form__mark">
+			<use xlink:href="#checkbox-mark"></use>
+		</svg>
+	</div>
+	<div class="checkbox-form__text">{{> @partial-block}}</div>
+</label>
