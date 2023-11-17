@@ -118,8 +118,8 @@ function sass() {
 let webpackConfig = {
 	mode: PRODUCTION ? 'production' : 'development',
 	output: {
-		publicPath: '/assets/javascript/',
-		path: path.resolve(__dirname, 'public/assets/javascript'),
+		publicPath: './assets/javascript/',
+		path: path.resolve(__dirname, './public/assets/javascript'),
 		chunkFilename: '[name].[contenthash].js',
 	},
 	optimization: {

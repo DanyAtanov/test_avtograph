@@ -6,6 +6,7 @@
 	top: 0;
 	right: 0;
 	height: 100vh;
+	height: 100dvh;
 	background-color: none;
 	padding-left: 100px;
 	overflow: auto;
@@ -31,6 +32,7 @@
 		width: 340px;
 		background-color: $white;
 		min-height: 100vh;
+		min-height: 100dvh;
 
 		display: flex;
 		flex-direction: column;
