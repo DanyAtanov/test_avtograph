@@ -11,6 +11,7 @@ import '../../components/ui/tabs/tabs'; */
 import '../../components/header/header';
 import '../../components/brands-section/brands-section';
 import '../../components/new-products-section/new-products-section';
+import '../../components/banners/banners';
 /* import '../../components/menu/menu';
 import '../../components/dropdown-menu/dropdown-menu';
 import '../../components/about-slider/about-slider';

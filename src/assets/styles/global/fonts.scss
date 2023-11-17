@@ -3,7 +3,6 @@
 */
 /* @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600&display=swap'); */
 
-
 @font-face {
 	font-family: 'Futura Futuris';
 	font-weight: 400;
@@ -42,4 +41,16 @@
 	src: local('Futura Futuris'),
 		url('../fonts/FuturaFuturisBlackC.woff2') format('woff2'),
 		url('../fonts/FuturaFuturisBlackC.woff') format('woff');
+}
+
+/* Futura Press */
+
+@font-face {
+	font-family: 'Futura Press';
+	font-weight: 400;
+	font-style: normal;
+	font-display: auto;
+	src: local('Futura Press'),
+		url('../fonts/FuturaPressPress.woff2') format('woff2'),
+		url('../fonts/FuturaPressPress.woff') format('woff');
 }
