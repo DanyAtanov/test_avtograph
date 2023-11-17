@@ -2,7 +2,7 @@ import './global/objectFitImages';
 import './global/lazy';
 import './global/base';
 
-import './global/magnet';
+// import './global/magnet';
 
 // VENDORS
 // import './import/jquery.nicescroll.min';
@@ -11,14 +11,7 @@ import './global/magnet';
 // import '../../components/ui/form/form';
 
 let loading = () => {
-	import(/* webpackChunkName: "components" */ './components').then(() => {
-		// app.goodsCardInit();
-		import(/* webpackChunkName: "animation" */ './global/animation').then(
-			({ animation }) => {
-				animation();
-			}
-		);
-	});
+	import(/* webpackChunkName: "components" */ './components').then(() => {});
 };
 
 if (window.addEventListener) window.addEventListener('load', loading, false);
