@@ -27,7 +27,7 @@ const modal = (() => {
 
 		$.ajax({
 			// url: '../../modals/' + modalName + '-modal.html',
-			url: '/modals/' + modalName + '-modal.html',
+			url: './modals/' + modalName + '-modal.html',
 
 			cache: false,
 		}).done(function (html) {
